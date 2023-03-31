@@ -10,12 +10,28 @@
         }
         gettime();//显示第一秒的时间
         setInterval("gettime()",1000);
+	</style>
     
 <style type="text/css">
     body{
 	    background: url("https://www.toptal.com/designers/subtlepatterns/uploads/leaves.png");  
 	}
 </style>
+	<script type="text/javascript">
+        function gettime() {
+            var time=new Date();
+            var arr=new Array("星期日","星期一","星期二","星期三","星期四","星期五","星期六");
+            var hour=time.getHours();
+            var min=time.getMinutes();
+            var sec=time.getSeconds();
+            var madetime=time.getFullYear()+"-"+(time.getMonth()+1)+"-"+time.getDate()+" "+arr[time.getDay()]+"  "+hour+(min<10?":0":":")+min+(sec<10?":0":":")+sec+(hour<12?" am":" pm");
+            document.getElementById("nowtime").innerText = madetime;
+        }
+        gettime();//显示第一秒的时间
+        setInterval("gettime()",1000);
+	</style>
+	<br>
+	</span>当前时间：<span id="nowtime">时间获取中:)...</span>
 
 <!DOCTYPE html>
 <html lang="zh">
@@ -38,5 +54,5 @@
 	<br>
 	<a href="https://pd.qq.com/s/d2gix3vv9">QQ频道</a> 
 	<br>
-	</span>当前时间：<span id="nowtime">时间获取中:)...</span>
+	
 	
